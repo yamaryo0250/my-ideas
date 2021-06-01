@@ -7,4 +7,9 @@ class CategoryIdea
     validates :body
     validates :category_id
   end
+
+  def save
+    category = Category.create(name: name)
+    Idea.create(body: body, category_id: category.id)
+  end
 end
