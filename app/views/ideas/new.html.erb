@@ -3,7 +3,7 @@
     <div class="form__wrapper">
       <h2 class="page-heading">新規アイデア登録</h2>
 
-      <%= form_with model: @idea, local: true do |f|%>
+      <%= form_with url: ideas_path, local: true do |f|%>
         <div class="field">
           <%= f.label :name, "カテゴリー" %><br />
           <%= f.text_field :name, id:"idea_category" %>
